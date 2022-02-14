@@ -1,0 +1,709 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Raleway;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 65px 100vh 0.3fr 0.5fr 1fr 140px;
+    grid-template-areas:
+    "nav" 
+    "header"
+    "asia"
+    "africa"
+    "europe"
+    "footer";
+    /* background: linear-gradient(30deg,#541412, #26310f, #151f1e); */
+}
+
+/*Navigation Section*/
+nav {
+    /* border: solid; */
+    position: sticky;
+    top: 0;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 1fr;
+    grid-area: "logo menu";
+    background-image: linear-gradient(to right, rgb(242,102,89,0.9), rgb(248,212,186,0.9));
+    z-index: 1;
+    
+}
+nav .menu {
+    /* border: solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+nav .menu .continents {
+    text-align: center;
+    padding-right: 19px;
+    padding-left: 19px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #ffff;
+    text-transform: uppercase;
+}
+nav .menu .continents:hover {
+    transform: scale(1.3);
+    background: rgba(131, 32, 28, 0.5);
+    border-radius: 2px;
+    transition: 0.5s;
+}
+
+nav .logo {
+    /* border: solid; */
+    display: flex;
+    padding-left: 50px;
+    align-items: center;
+    box-sizing: border-box;
+}
+/*Page Logo Style*/
+nav div img {
+    width: 60px;
+    height: 60px;
+    /* border: solid; */
+    
+}
+.checkbox {
+    display: none;
+}
+
+.labeltag {
+    padding-left: 20px;
+    font-size: larger;
+    font-weight: bolder;
+    letter-spacing: 5px;
+    color: rgb(134, 37, 37);
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    background: #f8d4ba;
+    z-index: 1;
+}
+
+.button:hover {
+    box-shadow: 0 0 10px 5px #c7091c, 0 0 10px 5px #f26659;
+    transition: 0.9s;
+    transform: scale(1.05);
+}
+
+.item {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    color: white;
+    position: absolute;
+    border-radius: 40px;
+    font-size: 2rem;
+}
+
+.godai {
+    background-color: rgb(212, 135, 212);    
+}
+
+.water {
+    background-color: #8dd8f3;
+}
+
+.earth {
+    background-color: #f3c9a1;
+}
+
+.air {
+    background-color: #a9c1ca;
+}
+
+.contactus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 13px;
+    font-size: 45px;
+    background-color: rgba(219, 190, 93, 0.3);
+    border: solid rgba(116, 100, 48, 0.3);
+}
+
+i {
+    color: burlywood;
+}
+
+
+/*Hover Effects for Page Logos in Nav*/
+
+.godai:hover {
+    box-shadow: 0 0 10px 5px rgb(51, 2, 51), 0 0 10px 5px rgb(87, 10, 87);
+    transition: 0.9s;
+    transform: scale(1.1);
+}
+
+.water:hover {
+    box-shadow: 0 0 10px 5px #020b63, 0 0 10px 5px #06469b;;
+    transition: 0.9s;
+    transform: scale(1.1);
+}
+
+.earth:hover {
+    box-shadow: 0 0 10px 5px #8b5503, 0 0 10px 5px #e7a355;;
+    transition: 0.9s;
+    transform: scale(1.1);
+}
+
+.air:hover {
+    box-shadow: 0 0 10px 5px #293b3a, 0 0 10px 5px #3a6164;;
+    transition: 0.9s;
+    transform: scale(1.1);
+}
+
+.contactus:hover {
+    box-shadow: 0 0 10px 5px #584f22, 0 0 10px 5px #744c03;;
+    transition: 0.9s;
+    transform: scale(1.1);
+}
+/*Tranformation of Page Logo Menu - Navigation section*/
+
+.checkbox:checked ~ .godai {
+    transform: translate(0,85px);
+    transition: 0.5s;
+}
+
+.checkbox:checked ~ .water {
+    transform: translate(0,150px);
+    transition: 0.5s;
+}
+
+.checkbox:checked ~ .earth {
+    transform: translate(0,215px);
+    transition: 0.5s;
+}
+
+.checkbox:checked ~ .air {
+    transform: translate(0,280px);
+    transition: 0.5s;
+}
+
+.checkbox:checked ~ .contactus {
+    transform: translate(0,345px);
+    transition: 0.5s;
+}
+
+
+/*header section*/
+header {
+    grid-area: header;
+    background-image: url(/MiniProjects/BackgroundPhotos/fire\ background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    position: absolute;
+    background: rgba(112, 110, 102, 0.3);
+    border-radius: 9px;
+    width: 800px;   
+}
+
+.pagestatement {
+    padding-left: 20px;
+    letter-spacing: 35px;
+    font-size: 90px;
+}
+.pagestatement2 {
+    padding-bottom: 10px;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+/*Articles Text and Image Styles*/
+img.left {
+    float: left;
+    width: 400px;
+    height: 300px;
+    padding: 5px;
+}
+img.right {
+    float: right;
+    width: 400px;
+    height: 300px;
+    padding: 2px;
+}
+
+img.full {
+    width: 100%;
+    padding: 2px;
+}
+
+dt {
+    font-size: larger;
+}
+dd {
+    font-size: larger;
+    text-align: justify;
+    padding: 0 9px 0 9px;
+}
+
+/*Asia Article*/
+.asia {
+    /* border: solid; */
+    grid-area: asia;
+    display: grid;
+    grid-template-areas:
+    "label1" 
+    "asiasec";
+    grid-template-columns: 1fr;
+    grid-template-rows: 90px 1fr;
+    padding: 10px;
+    color:white;
+}
+
+.label1 {
+    margin-bottom: 20px;
+    grid-area: label1;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 40px;
+    background-image: linear-gradient(to right, rgb(242,102,89,0.9), rgb(248,212,186,0.9));
+    color:white;
+}
+/*Continents article style*/
+.box1 {
+    background-image: linear-gradient(to right, rgb(242,102,89,0.8), rgb(84,20,18,0.8));
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.asiasec {
+    grid-area: asiasec;   
+}
+.box1:hover {
+    transform: scale(1.007);
+    transition: 0.5s;
+}
+
+
+/*Africa Article*/
+.africa {
+    /* border: solid; */
+    grid-area: africa;
+    display: grid;
+    grid-template-areas:
+    "label2" 
+    "africasec";
+    grid-template-columns: 1fr;
+    grid-template-rows: 90px 1fr;
+    padding: 10px;
+    color:white;
+}
+
+.label2 {
+    margin-bottom: 20px;
+    grid-area: label2;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 40px;
+    background-image: linear-gradient(to right, rgb(242,102,89,0.9), rgb(248,212,186,0.9));
+}
+
+/*Africa article style*/
+.box2 {
+    background-image: linear-gradient(to right, rgb(242,102,89,0.8), rgb(84,20,18,0.8));
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.africasec {
+    grid-area: africasec;   
+}
+.box2:hover {
+    transform: scale(1.007);
+    transition: 0.5s;
+}
+
+/*Europe Article*/
+.europe {
+    /* border: solid; */
+    grid-area: europe;
+    display: grid;
+    grid-template-areas:
+    "label3" 
+    "europesec";
+    grid-template-columns: 1fr;
+    grid-template-rows: 90px 1fr;
+    padding: 10px;
+    color:white;
+}
+
+.label3 {
+    margin-bottom: 20px;
+    grid-area: label3;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 40px;
+    background-image: linear-gradient(to right, rgb(242,102,89,0.9), rgb(248,212,186,0.9));
+    color:white;
+}
+
+/*Europe article style*/
+.box3 {
+    background-image: linear-gradient(to right, rgb(242,102,89,0.8), rgb(84,20,18,0.8));
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.europesec {
+    grid-area: europesec;   
+}
+.box3:hover {
+    transform: scale(1.007);
+    transition: 0.5s;
+}
+
+/*Footer Section Style and Manangement*/
+footer {
+    grid-area: footer;
+    padding: 10px;
+    background: #c34f5a;
+}
+
+footer dl a {
+    color: #8dd8f3;
+    text-decoration: none;
+}
+
+/*Smartphones Portrait and Landscape*/
+@media screen and (min-width:320px) and (max-width:480px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Raleway;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 130px 300px 0.6fr 0.6fr 1fr 100px;
+        grid-template-areas:
+        "nav" 
+        "header"
+        "asia"
+        "africa"
+        "europe"
+        "footer";
+        /* background: linear-gradient(30deg,#541412, #26310f, #151f1e); */
+    }
+    
+    /*Navigation Section*/
+    nav .logo {
+        /* border: solid; */
+        display: flex;
+        padding-left: 20px;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    nav {
+        /* border: solid; */
+        
+        position: sticky;
+        top: 0;
+        display: grid;
+        grid-area: 
+        "logo menu";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        background-image: linear-gradient(to right, rgb(242,102,89,0.9), rgb(248,212,186,0.9));
+        z-index: 1;  
+    }
+    nav .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        padding-top: 10px;
+    }
+
+    nav .menu .continents {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /*Tranformation of Page Logo Menu - Navigation section*/
+
+    .checkbox:checked ~ .godai {
+        transform: translate(75px,0);
+        transition: 0.5s;
+    }
+
+    .checkbox:checked ~ .water {
+        transform: translate(140px,0);
+        transition: 0.5s;
+    }
+
+    .checkbox:checked ~ .earth {
+        transform: translate(205px,0);
+        transition: 0.5s;
+    }
+
+    .checkbox:checked ~ .air {
+        transform: translate(270px,0);
+        transition: 0.5s;
+    }
+
+    .checkbox:checked ~ .contactus {
+        transform: translate(335px,0);
+        transition: 0.5s;
+    }
+    /*Header Section*/
+    header {
+        grid-area: header;
+        background-image: url(/MiniProjects/BackgroundPhotos/fire\ background.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+
+    }
+    .heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        position: absolute;
+        background: rgba(112, 110, 102, 0.3);
+        border-radius: 9px;
+        width: 200px; 
+    }
+    .pagestatement {
+        letter-spacing: 5px;
+        font-size: 20px;
+        text-align: center;
+    }
+    .pagestatement2 {
+        text-align: center;
+        letter-spacing: 5px;
+        font-size: 10px;
+    }
+
+    /*Asia Article*/
+    .asia {
+        grid-area: asia;
+        display: grid;
+        grid-template-areas:
+        "label1" 
+        "asiasec";
+        grid-template-columns: 1fr;
+        grid-template-rows: 90px 1fr;
+        padding: 1px;
+        color:white;
+    }
+    /*Africa Article*/
+    .africa {
+        grid-area: africa;
+        display: grid;
+        grid-template-areas:
+        "label2" 
+        "africasec" ;
+        grid-template-columns: 1fr;
+        grid-template-rows: 90px 1fr;
+        color:white;
+    
+    }
+    /*Europe Article*/
+    .europe {
+        grid-area: europe;
+        display: grid;
+        grid-template-areas:
+        "label3" 
+        "europesec" ;
+        grid-template-columns: 1fr;
+        grid-template-rows: 90px 1fr;
+        color:white;
+    }
+    
+}
+
+/*Tablet and all Ipad*/
+@media screen and (min-width:768px) and (max-width:1024px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Raleway;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 130px 300px 0.3fr 0.5fr 1fr 100px;
+        grid-template-areas:
+        "nav" 
+        "header"
+        "asia"
+        "africa"
+        "europe"
+        "footer";
+        /* background: linear-gradient(30deg,#541412, #26310f, #151f1e); */
+    }
+    
+    /*Navigation Section*/
+    nav .logo {
+        /* border: solid; */
+        display: flex;
+        padding-left: 20px;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    nav {
+        /* border: solid; */
+        
+        position: sticky;
+        top: 0;
+        display: grid;
+        grid-area: 
+        "logo menu";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        background-image: linear-gradient(to right, rgb(242,102,89,0.9), rgb(248,212,186,0.9));
+        z-index: 1;  
+    }
+    nav .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        padding-top: 10px;
+    }
+
+    nav .menu .continents {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /*Tranformation of Page Logo Menu - Navigation section*/
+
+    .checkbox:checked ~ .godai {
+        transform: translate(85px,0);
+        transition: 0.5s;
+    }
+
+    .checkbox:checked ~ .water {
+        transform: translate(150px,0);
+        transition: 0.5s;
+    }
+
+    .checkbox:checked ~ .earth {
+        transform: translate(215px,0);
+        transition: 0.5s;
+    }
+
+    .checkbox:checked ~ .air {
+        transform: translate(280px,0);
+        transition: 0.5s;
+    }
+
+    .checkbox:checked ~ .contactus {
+        transform: translate(345px,0);
+        transition: 0.5s;
+    }
+    /*Header Section*/
+    header {
+        grid-area: header;
+        background-image: url(/MiniProjects/BackgroundPhotos/fire\ background.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+
+    }
+    .heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        position: absolute;
+        background: rgba(112, 110, 102, 0.3);
+        border-radius: 9px;
+        width: 200px; 
+    }
+    .pagestatement {
+        letter-spacing: 5px;
+        font-size: 20px;
+        text-align: center;
+    }
+    .pagestatement2 {
+        text-align: center;
+        letter-spacing: 5px;
+        font-size: 10px;
+    }
+
+    /*Asia Article*/
+    .asia {
+        grid-area: asia;
+        display: grid;
+        grid-template-areas:
+        "label1" 
+        "asiasec" ;
+        grid-template-columns: 1fr;
+        grid-template-rows: 90px 1fr;
+        padding: 1px;
+        color:white;
+    }
+    /*Africa Article*/
+    .africa {
+        grid-area: africa;
+        display: grid;
+        grid-template-areas:
+        "label2" 
+        "africasec";
+        grid-template-columns: 1fr;
+        grid-template-rows: 90px 1fr;
+        color:white;
+    }
+    /*Europe Article*/
+    .europe {
+        grid-area: europe;
+        display: grid;
+        grid-template-areas:
+        "label3" 
+        "europesec";
+        grid-template-columns: 1fr;
+        grid-template-rows: 90px 1fr;
+        color:white;
+    }
+}
